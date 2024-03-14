@@ -1,0 +1,88 @@
+var jsonResume={
+    "basics": {
+      "name": "Snega M",
+      "email": "snehamurugan2019@gmail.com",
+      "phone": 812345678,
+      "degree": "B.E",
+      "location": {
+        "address": "109 ,xx street,Trichy",
+        "postalCode": "6002008,
+        "city": "Perambalur",
+        "state": "Tamilnadu",
+        "country": "India"
+      },
+      "profiles": 
+        {
+                    "website": "www.linkedin.com/in/snega-m-36baa4257",
+
+          "github":"https://https://github.com/SnegaMurugan",
+     
+        }
+      
+    },
+    "work": [
+      {
+        "company": "Pulse Telesystems pvt ltd",
+        "position": "Monitoring Engineer",
+        "startDate": "2023-07-17",
+        "endDate": "Till date",
+        "summary": "Handling customer network issues and pro-active monitoring ",
+
+      },
+    ],
+    "education": [
+      {
+        "institution": "Annamalai University,Chidambaram",
+        "department": "Information technology",
+        "studyType": "fulltime",
+        "batch start year": 2019,
+        "batch end year": 2023,
+        "gpa": 8.3,
+      }
+    ],
+    "skills": [
+      {
+        "name": "C++,javascript, MFC, Image processing, VC++,Sql Server",
+        "level": "Intermediate",
+        "project": 
+          "Roller auto visual inspecting software"
+        
+      }
+    ],
+    "languages": [
+      {
+        "language": "Tamil,Enlish",
+      }
+    ],
+    "interests": [
+      {
+        "name": "Segmentation on multi organ processing",
+      }
+    ]
+  };
+  //************************************json end**************************
+
+console.log('*************************For Loop**********************************');
+// for loop
+const keys = Object.keys(jsonResume);
+for (let i = 0; i < keys.length; i++) {
+  const key = keys[i];
+  const value = jsonResume[key];
+  console.log(value);
+}
+console.log('*************************For Each Loop**********************************');
+//For-Each 
+Object.entries(jsonResume).forEach(([key, value]) => 
+{
+  console.log(value);
+});
+console.log('*************************For in Loop**********************************');
+//for-in 
+for (let key in jsonResume) {
+  console.log(jsonResume[key]);
+}
+console.log('*************************For of Loop**********************************');
+//for-of 
+for (const value of Object.values(jsonResume)) {
+  console.log(value);
+}
