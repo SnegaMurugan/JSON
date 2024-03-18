@@ -1,0 +1,44 @@
+3.Write a “person” class to hold all the details.
+class Person{
+constructor(firstName,lastName,age,city,qualification){
+this.firstName=firstName;
+this.lastName=lastName;
+this.age=age;
+this.city=city;
+this.qualification=qualification
+}
+}
+const person=new Person('snega','rubini',20,'perambalur','B.E')
+console.log(person)
+
+4.write a class to calculate the Uber price.
+//base fare, distancePerMile,distancePerminute, Booking Fee,
+
+class FrstRide {
+constructor(baseFare,distancePerMile,distancePerminute,bookingFee) {
+this.baseFare= baseFare;
+this.distancePerMile=distancePerMile;
+this.distancePerMinute=distancePerMinute;
+this.bookingFee=bookingFee;
+}
+calculateDistance(distanceMile,distanceMinute){
+const distanceCost=distanceMile*this.distancePerMile;
+const durationCost=distanceMinute*this.distancePerMinute;
+const totalFee=this.baseFare+distanceCost+durationCost+this.bookingFee;
+return totalFee;
+}
+}
+const baseFare=2.35;
+const distancePerMile=0.87;
+const distancePerMinute=2.00;
+const bookingFee=5;
+
+const distance=2;
+const duration=1;
+
+const totalPersonFee=new FrstRide(baseFare, distancePerMile, distancePerMinute, bookingFee);
+
+
+const fullFee=totalPersonFee.calculateDistance(distance,duration);
+console.log("the entire fee:"+fullFee);
+Seen by SathishKumar S at 8:04 PM.
